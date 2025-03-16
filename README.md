@@ -108,9 +108,8 @@ https://github.com/trpc-group/trpc-go/blob/main/docs/README.zh_CN.md
 consul服务发现和注册使用参考如下文档：
 - https://github.com/trpc-ecosystem/go-naming-consul
 - https://github.com/trpc-ecosystem/go-naming-consul/blob/main/README.zh_CN.md
-当然，你也可以参考tRPC-GO服务发现和注册接口，自行实现名字服务的相关接口。
-自定义服务发现和注册参考：https://github.com/trpc-group/trpc-go/blob/main/naming/README.zh_CN.md
-- 
+- 自定义服务发现和注册参考：https://github.com/trpc-group/trpc-go/blob/main/naming/README.zh_CN.md
+
 # tRPC-GO服务可观测性接入
 - prometheus接入： https://github.com/trpc-ecosystem/go-metrics-prometheus/blob/main/README.zh_CN.md
 - opentelemetry接入：https://github.com/trpc-ecosystem/go-opentelemetry/blob/main/README.zh_CN.md
