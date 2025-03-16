@@ -103,17 +103,22 @@ https://github.com/trpc-group/trpc-go/blob/main/docs/README.zh_CN.md
 - 可以根据实际情况接入http标准库或者第三方http框架，例如：gin、gorilla/mux、go-chi/chi等框架
 
 # tRPC服务发现和注册
+名字服务参考：https://github.com/trpc-group/trpc-go/blob/main/docs/developer_guide/develop_plugins/naming.zh_CN.md
+
 consul服务发现和注册使用参考如下文档：
 - https://github.com/trpc-ecosystem/go-naming-consul
 - https://github.com/trpc-ecosystem/go-naming-consul/blob/main/README.zh_CN.md
 当然，你也可以参考tRPC-GO服务发现和注册接口，自行实现名字服务的相关接口。
-
-# tRPC-GO服务可观测性
+自定义服务发现和注册参考：https://github.com/trpc-group/trpc-go/blob/main/naming/README.zh_CN.md
+- 
+# tRPC-GO服务可观测性接入
 - prometheus接入： https://github.com/trpc-ecosystem/go-metrics-prometheus/blob/main/README.zh_CN.md
 - opentelemetry接入：https://github.com/trpc-ecosystem/go-opentelemetry/blob/main/README.zh_CN.md
 
 # tRPC-GO log日志包接入
-在代码中直接引入log包，然后使用log包上的相关方法即可
+参考文档：https://github.com/trpc-group/trpc-go/blob/main/log/README.zh_CN.md
+
+你在代码中先直接引入log包，然后使用log包上的相关方法即可
 ```go
 import (
     "trpc.group/trpc-go/trpc-go/log"
@@ -131,5 +136,9 @@ log.Infof("name: %s, index: %d", name, index)
 # tRPC-GO 参数自动校验接入
 参考文档：https://github.com/trpc-ecosystem/go-filter/tree/main/validation
 
-# etcd配置管理
-tRPC-Go etcd configuration plugin: https://github.com/trpc-ecosystem/go-config-etcd
+# tRPC-GO go-gateway接入
+参考文档：https://github.com/trpc-ecosystem/go-gateway
+
+# 配置插件接入
+- 参考文档：https://github.com/trpc-group/trpc-go/blob/main/docs/developer_guide/develop_plugins/config.zh_CN.md
+- tRPC-Go etcd configuration plugin: https://github.com/trpc-ecosystem/go-config-etcd
