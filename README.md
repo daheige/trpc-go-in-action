@@ -1,4 +1,4 @@
-# tRPC官方手册
+# tRPC官方文档
 https://trpc.group
 
 # trpc-cmdline工具和相关依赖安装
