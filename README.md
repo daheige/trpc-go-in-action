@@ -12,6 +12,13 @@ https://trpc.group
     insteadOf = https://github.com/
 ```
 2. 执行如下命令安装`trpc-cmdline`工具
+- 在执行这一步之前，请安装好golang（如果没有安装，在https://go.dev/dl/官网下载对应的go版本安装即可）。
+- golang version >= 1.18
+- 设置GOPROXY环境变量（如果网络环境不需要代理，可以忽略这一步）。
+```shell
+go env -w GOPROXY=https://goproxy.cn,direct
+```
+接着，执行如下命令安装`trpc-cmdline`工具
 ```shell
 go install trpc.group/trpc-go/trpc-cmdline/trpc@latest
 ```
