@@ -4,7 +4,7 @@ https://trpc.group
 # trpc-cmdline工具和相关依赖安装
 参考文档：https://github.com/trpc-group/trpc-cmdline/blob/main/README.zh_CN.md
 
-这里，我推荐使用linux系统或mac系统安装trpc-cmdline和trpc-go相关依赖，具体步骤如下：
+这里，我推荐您使用linux系统或mac系统安装trpc-cmdline和trpc-go相关依赖，具体步骤如下：
 1. 配置`~/.gitconfig`文件：
 ```yaml
 # 添加如下配置
@@ -88,9 +88,48 @@ https://trpc.group/zh/docs/what-is-trpc/plugin_ecosystem/
 # tRPC-Go使用手册
 https://github.com/trpc-group/trpc-go/blob/main/docs/README.zh_CN.md
 
+# tRPC-database各种数据库快速接入
+支持主流的各种数据库快速接入，参考文档：https://github.com/trpc-ecosystem/go-database/blob/main/README.zh_CN.md
+
+- 在日常的开发过程中，开发者经常会访问 MySQL、Redis、Kafka 等存储进行数据库的读写。直接使用开源的 SDK 虽然可以满足访问数据库的需求，但是用户需要自己负责路由寻址、监控上报、配置的开发。
+- 考虑到这些原因，tRPC-Go 提供了多种多样的路由寻址、监控上报、配置管理的插件，同时还封装了开源的 SDK，复用 tRPC-Go 插件的能力，减少重复代码。
+- 同时，tRPC-Go 还提供了部分开源 SDK 的封装，可以直接复用 tRPC-Go 的路由寻址、监控上报等功能。
+
+# tRPC-GO如何支持gRPC协议接入
+参考文档：https://github.com/trpc-ecosystem/go-codec/blob/main/grpc/README.zh_CN.md
+
+# tRPC-GO如何支持http协议接入
+- 参考文档：https://github.com/trpc-group/trpc-go/blob/main/http/README.zh_CN.md
+- 可以根据实际情况接入http标准库或者第三方http框架，例如：gin、gorilla/mux、go-chi/chi等框架
+
 # tRPC服务发现和注册
-https://github.com/trpc-ecosystem/go-naming-consul
-https://github.com/trpc-ecosystem/go-naming-consul/blob/main/README.zh_CN.md
+consul服务发现和注册使用参考如下文档：
+- https://github.com/trpc-ecosystem/go-naming-consul
+- https://github.com/trpc-ecosystem/go-naming-consul/blob/main/README.zh_CN.md
+当然，你也可以参考tRPC-GO服务发现和注册接口，自行实现名字服务的相关接口。
+
+# tRPC-GO服务可观测性
+- prometheus接入： https://github.com/trpc-ecosystem/go-metrics-prometheus/blob/main/README.zh_CN.md
+- opentelemetry接入：https://github.com/trpc-ecosystem/go-opentelemetry/blob/main/README.zh_CN.md
+
+# tRPC-GO log日志包接入
+在代码中直接引入log包，然后使用log包上的相关方法即可
+```go
+import (
+    "trpc.group/trpc-go/trpc-go/log"
+)
+
+// ... 省略其他代码...
+name := "abc"
+index := 1
+log.Infof("name: %s, index: %d", name, index)
+```
+
+# tRPC-GO recover组件接入
+参考文档：https://github.com/trpc-ecosystem/go-filter/tree/main/recovery
+
+# tRPC-GO 参数自动校验接入
+参考文档：https://github.com/trpc-ecosystem/go-filter/tree/main/validation
 
 # etcd配置管理
 tRPC-Go etcd configuration plugin: https://github.com/trpc-ecosystem/go-config-etcd
