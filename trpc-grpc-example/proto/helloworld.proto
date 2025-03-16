@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+// 这里的包名，可以根据实际情况更改，例如：package trpc.helloworld
+package trpc.helloworld;
+
+// 这里的pb前面的路径可以忽略，或者可以将生成的代码放在制定的git仓库中
+option go_package="github.com/some-repo/examples/pb";
+
+service Greeter {
+  rpc Hello (HelloRequest) returns (HelloReply) {}
+}
+
+message HelloRequest {
+  string msg = 1;
+}
+
+message HelloReply {
+  string msg = 1;
+}
