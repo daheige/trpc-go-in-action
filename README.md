@@ -1,9 +1,27 @@
-# tRPC官方
+# tRPC官方手册
 https://trpc.group
 
-# tRPC命令工具安装
-推荐使用linux系统或mac系统安装tRPC命令行工具，tRPC cmdline安装方式如下：
-1. install protoc
+# trpc-cmdline工具和相关依赖安装
+参考文档：https://github.com/trpc-group/trpc-cmdline/blob/main/README.zh_CN.md
+
+这里，我推荐使用linux系统或mac系统安装trpc-cmdline和trpc-go相关依赖，具体步骤如下：
+1. 配置`~/.gitconfig`文件：
+```yaml
+# 添加如下配置
+[url "ssh://git@github.com/"]
+    insteadOf = https://github.com/
+```
+2. 执行如下命令安装`trpc-cmdline`工具
+```shell
+go install trpc.group/trpc-go/trpc-cmdline/trpc@latest
+```
+查看trpc-go版本
+```shell
+trpc version
+# 输出结果：trpc-group/trpc-cmdline version: v1.0.8
+```
+接下来，我们还需要继续执行3～5步，来安装trpc-go相关依赖。
+3. install protoc
 - mac系统安装方式如下：
 ```shell
 brew install protobuf
@@ -18,7 +36,7 @@ export PATH=~/.local/bin:$PATH # Add this to your `~/.bashrc`.
 protoc --version
 libprotoc 3.15.8
 ```
-2. install flatc
+4. install flatc
 - linux系统安装方式
 ```shell
 # Reference: https://github.com/google/flatbuffers/releases
@@ -43,7 +61,7 @@ flatc --version
 flatc version 25.2.10
 ```
 
-3. install go tools
+5. install go tools
 ```shell
 # install protoc-gen-go
 # Reference: https://grpc.io/docs/languages/go/quickstart/
@@ -59,7 +77,7 @@ go install go.uber.org/mock/mockgen@latest
 go install github.com/envoyproxy/protoc-gen-validate@latest
 go install github.com/envoyproxy/protoc-gen-validate/cmd/protoc-gen-validate-go@latest
 ```
-当tRPC命令行工具安装好后，就可以参考：https://github.com/trpc-group/trpc-cmdline/blob/main/README.zh_CN.md 创建一个微服务项目
+到这里，tRPC命令行工具安装完毕，此时我们就可以参考：https://github.com/trpc-group/trpc-cmdline/blob/main/README.zh_CN.md 创建一个微服务项目
 
 # tRPC架构设计
 https://trpc.group/zh/docs/what-is-trpc/archtecture_design/
