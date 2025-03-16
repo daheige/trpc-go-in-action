@@ -21,6 +21,7 @@ trpc version
 # 输出结果：trpc-group/trpc-cmdline version: v1.0.8
 ```
 接下来，我们还需要继续执行3～5步，来安装trpc-go相关依赖。
+
 3. install protoc
 - mac系统安装方式如下：
 ```shell
