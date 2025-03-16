@@ -104,7 +104,8 @@ https://github.com/trpc-group/trpc-go/blob/main/docs/README.zh_CN.md
 - 同时，tRPC-Go 还提供了部分开源 SDK 的封装，可以直接复用 tRPC-Go 的路由寻址、监控上报等功能。
 
 # tRPC-GO如何支持gRPC协议接入
-参考文档：https://github.com/trpc-ecosystem/go-codec/blob/main/grpc/README.zh_CN.md
+- 参考文档：https://github.com/trpc-ecosystem/go-codec/blob/main/grpc/README.zh_CN.md
+- 实际demo参考：[trpc-grpc-example](trpc-grpc-example)
 
 # tRPC-GO如何支持http协议接入
 - 参考文档：https://github.com/trpc-group/trpc-go/blob/main/http/README.zh_CN.md
