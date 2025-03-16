@@ -138,6 +138,6 @@ log.Infof("name: %s, index: %d", name, index)
 # tRPC-GO go-gateway接入
 参考文档：https://github.com/trpc-ecosystem/go-gateway
 
-# 配置插件接入
+# tRPC-GO 配置插件接入
 - 参考文档：https://github.com/trpc-group/trpc-go/blob/main/docs/developer_guide/develop_plugins/config.zh_CN.md
 - tRPC-Go etcd configuration plugin: https://github.com/trpc-ecosystem/go-config-etcd
